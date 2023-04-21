@@ -1,0 +1,17 @@
+// 生成一个随机数，作为需要证明的“秘密”
+const secret = Math.floor(Math.random() * 1000);
+
+// 生成一个随机数，作为证明中的“随机因子”
+const factor = Math.floor(Math.random() * 1000);
+
+// 计算出“证明”（这里仅是一个示例，实际证明需要根据具体情况计算）
+const proof = (secret + factor) % 2 === 0;
+
+// 验证证明是否正确
+const verification = (secret + factor) % 2 === 0;
+
+// 输出结果
+console.log(`秘密：${secret}`);
+console.log(`随机因子：${factor}`);
+console.log(`证明：${proof}`);
+console.log(`验证：${verification}`);
